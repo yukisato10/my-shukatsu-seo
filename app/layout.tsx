@@ -6,8 +6,10 @@ export const metadata: Metadata = {
     default: "My就活 | 就活管理アプリ",
     template: "%s | My就活",
   },
+
   description:
     "My就活は、企業管理・ES管理・面接予定・締切・就活ニュース・就活サービスをまとめて管理できる就活管理アプリです。",
+
   keywords: [
     "就活管理アプリ",
     "就活アプリ",
@@ -17,6 +19,11 @@ export const metadata: Metadata = {
     "就活ニュース",
     "就活サービス",
   ],
+
+  verification: {
+    google: "dqcBGMxefHKIVMuxq_Z8nM0eNk9yjaugo40k09X8O-g",
+  },
+
   openGraph: {
     title: "My就活 | 就活管理アプリ",
     description:
