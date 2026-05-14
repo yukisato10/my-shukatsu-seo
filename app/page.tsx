@@ -1,4 +1,7 @@
 export default function Home() {
+  const appStoreUrl =
+    "https://apps.apple.com/jp/app/my%E5%B0%B1%E6%B4%BB-%E5%B0%B1%E6%B4%BB%E7%AE%A1%E7%90%86-es-%E3%83%9E%E3%82%A4%E3%83%9A%E3%83%BC%E3%82%B8-%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC/id6760533552";
+
   const features = [
     {
       title: "企業管理",
@@ -32,6 +35,51 @@ export default function Home() {
     },
   ];
 
+  const screens = [
+    {
+      title: "スケジュール管理",
+      text: "面接・ES締切・説明会をカレンダーで管理。大事な予定の抜け漏れを防げます。",
+      image: "/karenda-.jpg",
+      alt: "就活スケジュール管理アプリのカレンダー画面",
+    },
+    {
+      title: "ES管理",
+      text: "ESの設問・回答・志望動機を企業ごとに保存。過去のESもすぐに見返せます。",
+      image: "/ES.jpg",
+      alt: "ES管理アプリの画面",
+    },
+    {
+      title: "企業管理",
+      text: "志望度や選考状況を一覧管理。企業ごとの進捗をひと目で確認できます。",
+      image: "/kigyoukanri.jpg",
+      alt: "企業管理アプリの画面",
+    },
+    {
+      title: "予定管理",
+      text: "企業ごとの予定をまとめて管理。予定にはメモも残せます。",
+      image: "/yotei.jpg",
+      alt: "企業ごとの予定管理画面",
+    },
+    {
+      title: "企業メモ",
+      text: "企業研究やOB訪問の内容を企業ごとにまとめて整理できます。",
+      image: "/kigyoumemo.jpg",
+      alt: "企業メモ管理画面",
+    },
+    {
+      title: "就活ニュース",
+      text: "採用・インターン・業界ニュースをアプリ内でまとめて確認できます。",
+      image: "/news.jpg",
+      alt: "就活ニュース機能の画面",
+    },
+    {
+      title: "プロフィール管理",
+      text: "ESで使う自己紹介やガクチカなどの内容を保存し、すぐにコピーできます。",
+      image: "/purofi-ru.jpg",
+      alt: "プロフィール管理画面",
+    },
+  ];
+
   return (
     <main className="min-h-screen overflow-hidden bg-[#07111f] text-white">
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
@@ -59,6 +107,9 @@ export default function Home() {
           <nav className="hidden gap-8 text-sm text-gray-300 md:flex">
             <a href="#features" className="hover:text-white">
               機能
+            </a>
+            <a href="#screens" className="hover:text-white">
+              画面紹介
             </a>
             <a href="#columns" className="hover:text-white">
               コラム
@@ -97,7 +148,7 @@ export default function Home() {
               className="mt-10 flex flex-col gap-4 sm:flex-row"
             >
               <a
-                href="https://apps.apple.com/jp/app/my%E5%B0%B1%E6%B4%BB-%E5%B0%B1%E6%B4%BB%E7%AE%A1%E7%90%86-es-%E3%83%9E%E3%82%A4%E3%83%9A%E3%83%BC%E3%82%B8-%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC/id6760533552"
+                href={appStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex min-h-[92px] items-center justify-center rounded-2xl bg-white px-8 text-center font-bold text-black shadow-2xl transition hover:scale-[1.03]"
@@ -171,6 +222,51 @@ export default function Home() {
       </section>
 
       <section
+        id="screens"
+        className="border-y border-white/10 bg-[#081423] py-28"
+      >
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="text-center">
+            <p className="text-sm font-bold tracking-[0.3em] text-cyan-300">
+              APP SCREEN
+            </p>
+
+            <h2 className="mt-4 text-4xl font-black">
+              アプリ画面で機能をチェック
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-9 text-gray-400">
+              ES管理、企業管理、面接予定、就活ニュースなど、
+              就活に必要な情報を一つのアプリにまとめて管理できます。
+            </p>
+          </div>
+
+          <div className="mt-20 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+            {screens.map((screen) => (
+              <div
+                key={screen.title}
+                className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-4 backdrop-blur-xl transition hover:-translate-y-2 hover:bg-white/10"
+              >
+                <img
+                  src={screen.image}
+                  alt={screen.alt}
+                  className="w-full rounded-[1.5rem]"
+                />
+
+                <div className="p-4">
+                  <h3 className="text-2xl font-bold">{screen.title}</h3>
+
+                  <p className="mt-4 leading-8 text-gray-400">
+                    {screen.text}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
         id="columns"
         className="border-t border-white/10 bg-white/5 py-24 backdrop-blur-xl"
       >
@@ -224,7 +320,7 @@ export default function Home() {
             </p>
 
             <a
-              href="https://apps.apple.com/jp/app/my%E5%B0%B1%E6%B4%BB-%E5%B0%B1%E6%B4%BB%E7%AE%A1%E7%90%86-es-%E3%83%9E%E3%82%A4%E3%83%9A%E3%83%BC%E3%82%B8-%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC/id6760533552"
+              href={appStoreUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-10 inline-flex min-h-[64px] items-center justify-center rounded-2xl bg-white px-10 text-lg font-black text-black transition hover:scale-[1.03]"
@@ -238,8 +334,6 @@ export default function Home() {
       <footer className="border-t border-white/10 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-gray-400 md:flex-row">
           <p>© My就活</p>
-
-          
         </div>
       </footer>
     </main>
