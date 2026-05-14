@@ -126,9 +126,17 @@ export default function Home() {
 
         <div className="mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:py-28">
           <div>
-            <div className="inline-flex items-center gap-3 rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-black text-blue-600 shadow-sm">
-              <span className="h-2.5 w-2.5 rounded-full bg-blue-500" />
-              無料で使える就活管理アプリ
+            <div className="flex items-center gap-5">
+              <img
+                src="/icon.png"
+                alt="My就活"
+                className="h-24 w-24 rounded-[2rem] shadow-2xl"
+              />
+
+              <div className="inline-flex items-center gap-3 rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-black text-blue-600 shadow-sm">
+                <span className="h-2.5 w-2.5 rounded-full bg-blue-500" />
+                無料で使える就活管理アプリ
+              </div>
             </div>
 
             <h1 className="mt-8 text-5xl font-black leading-tight tracking-tight text-[#0b1220] sm:text-7xl">

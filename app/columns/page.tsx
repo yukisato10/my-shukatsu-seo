@@ -45,20 +45,20 @@ const articles = [
 
 export default function ColumnsPage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#07111f] text-white">
+    <main className="min-h-screen overflow-hidden bg-[#f4f9ff] text-[#0f172a]">
       <section className="relative mx-auto max-w-7xl px-6 py-20">
-        <div className="absolute left-[-120px] top-[-120px] h-[360px] w-[360px] rounded-full bg-blue-500/30 blur-3xl" />
-        <div className="absolute right-[-120px] top-[220px] h-[360px] w-[360px] rounded-full bg-cyan-400/20 blur-3xl" />
+        <div className="absolute left-[-120px] top-[-120px] h-[360px] w-[360px] rounded-full bg-blue-200/70 blur-3xl" />
+        <div className="absolute right-[-120px] top-[220px] h-[360px] w-[360px] rounded-full bg-cyan-200/60 blur-3xl" />
 
         <div className="relative">
           <Link
             href="/"
-            className="inline-flex rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm font-bold text-blue-200 backdrop-blur hover:bg-white/10"
+            className="inline-flex rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-black text-blue-600 shadow-sm hover:bg-blue-50"
           >
             ← トップへ戻る
           </Link>
 
-          <p className="mt-12 text-sm font-bold tracking-[0.3em] text-cyan-300">
+          <p className="mt-12 text-sm font-black tracking-[0.3em] text-blue-500">
             COLUMNS
           </p>
 
@@ -66,7 +66,7 @@ export default function ColumnsPage() {
             就活コラム
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-9 text-gray-300">
+          <p className="mt-6 max-w-2xl text-lg leading-9 text-slate-600">
             就活管理、ES管理、面接対策、スケジュール管理、就活ニュースの見方まで、
             就活を効率よく進めるための記事をまとめています。
           </p>
@@ -76,14 +76,14 @@ export default function ColumnsPage() {
               <Link
                 key={article.href}
                 href={article.href}
-                className="group rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:bg-white/10"
+                className="group rounded-[2rem] border border-blue-100 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
                 <div className="flex items-center justify-between gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-500 text-3xl shadow-lg">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-3xl shadow-sm">
                     {article.icon}
                   </div>
 
-                  <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-bold text-cyan-200">
+                  <span className="rounded-full bg-blue-50 px-4 py-2 text-xs font-black text-blue-600">
                     {article.tag}
                   </span>
                 </div>
@@ -92,11 +92,11 @@ export default function ColumnsPage() {
                   {article.title}
                 </h2>
 
-                <p className="mt-4 leading-8 text-gray-300">
+                <p className="mt-4 leading-8 text-slate-600">
                   {article.description}
                 </p>
 
-                <div className="mt-8 inline-flex items-center gap-2 font-bold text-cyan-300">
+                <div className="mt-8 inline-flex items-center gap-2 font-black text-blue-600">
                   記事を見る
                   <span className="transition group-hover:translate-x-1">→</span>
                 </div>
